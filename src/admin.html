@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Agrinho 2025 Scratch Voting</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Admin Panel</h1>
+        <form id="login-form">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div id="admin-actions" style="display: none;">
+            <h2>Manage Projects</h2>
+            <button id="add-project">Add Project</button>
+            <button id="edit-project">Edit Project</button>
+            <button id="delete-project">Delete Project</button>
+            <button id="view-votes">View Vote Counts</button>
+            <div id="project-list"></div>
+        </div>
+    </div>
+    <script src="js/admin.js"></script>
+</body>
+</html>
