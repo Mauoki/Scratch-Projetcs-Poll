@@ -1,28 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Agrinho 2025 Scratch Voting</title>
+    <title>Painel Administrativo - Agrinho 2025</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="admin-container">
-        <h1>Admin Panel</h1>
-        <form id="login-form">
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
-            <button type="submit">Login</button>
+        <header class="admin-header">
+            <h1><i class="fas fa-lock"></i> Painel Administrativo</h1>
+            <p>Gerencie os projetos e visualize os resultados da votação</p>
+        </header>
+
+        <form id="login-form" class="admin-form">
+            <div class="form-group">
+                <label for="password">
+                    <i class="fas fa-key"></i> Senha:
+                </label>
+                <input type="password" id="password" required placeholder="Digite sua senha">
+            </div>
+            <button type="submit" class="admin-button">
+                <i class="fas fa-sign-in-alt"></i> Entrar
+            </button>
         </form>
+
         <div id="admin-actions" style="display: none;">
-            <h2>Manage Projects</h2>
-            <button id="add-project">Add Project</button>
-            <button id="edit-project">Edit Project</button>
-            <button id="delete-project">Delete Project</button>
-            <button id="view-votes">View Vote Counts</button>
-            <div id="project-list"></div>
+            <div class="admin-toolbar">
+                <button id="add-project" class="admin-button">
+                    <i class="fas fa-plus"></i> Adicionar Projeto
+                </button>
+                <button id="edit-project" class="admin-button">
+                    <i class="fas fa-edit"></i> Editar Projeto
+                </button>
+                <button id="delete-project" class="admin-button danger">
+                    <i class="fas fa-trash"></i> Excluir Projeto
+                </button>
+                <button id="view-votes" class="admin-button info">
+                    <i class="fas fa-chart-bar"></i> Ver Votação
+                </button>
+            </div>
+
+            <div class="admin-content">
+                <div class="projects-panel">
+                    <h2><i class="fas fa-folder"></i> Projetos</h2>
+                    <div id="project-list" class="project-grid"></div>
+                </div>
+
+                <div id="project-form" class="project-form" style="display: none;">
+                    <h3>Gerenciar Projeto</h3>
+                    <form id="manage-project-form">
+                        <div class="form-group">
+                            <label for="project-title">Título do Projeto</label>
+                            <input type="text" id="project-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-category">Categoria</label>
+                            <select id="project-category" required>
+                                <option value="1">1º ao 3º ano</option>
+                                <option value="2">4º ao 6º ano</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-url">URL do Projeto Scratch</label>
+                            <input type="url" id="project-url" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="admin-button">Salvar</button>
+                            <button type="button" class="admin-button secondary" onclick="closeForm()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src="js/admin.js"></script>
 </body>
 </html>
