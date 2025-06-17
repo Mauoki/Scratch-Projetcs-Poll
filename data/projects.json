@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "City Farmer Adventure",
+        "description": "A fun game where players help a farmer grow crops in the city.",
+        "category": "Elementary",
+        "url": "https://scratch.mit.edu/projects/123456789/",
+        "votes": 0
+    },
+    {
+        "id": 2,
+        "title": "Countryside Quest",
+        "description": "An interactive story about a child's journey from the city to the countryside.",
+        "category": "Elementary",
+        "url": "https://scratch.mit.edu/projects/987654321/",
+        "votes": 0
+    },
+    {
+        "id": 3,
+        "title": "Urban Garden Simulator",
+        "description": "Create and manage your own urban garden in this simulation game.",
+        "category": "Middle School",
+        "url": "https://scratch.mit.edu/projects/112233445/",
+        "votes": 0
+    },
+    {
+        "id": 4,
+        "title": "Farm to Table",
+        "description": "Learn about the journey of food from farms to city tables in this educational game.",
+        "category": "Middle School",
+        "url": "https://scratch.mit.edu/projects/556677889/",
+        "votes": 0
+    }
+]
